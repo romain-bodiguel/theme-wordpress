@@ -33,7 +33,7 @@ get_header();
             <h3><?= get_the_title(); ?></h3>
             <div class="post__meta">
                 <img class="post__author-icon" src="/images/icon-dar.png" alt="">
-                <strong class="post__author">Darren Collison</strong>
+                <strong class="post__author"><?php the_author(); ?></strong>
                 <time datetime="2018-02-10">le 10 février 2018</time>
             </div>
             <p><?php the_content() ?></p>
