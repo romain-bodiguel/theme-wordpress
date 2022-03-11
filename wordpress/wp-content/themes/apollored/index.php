@@ -31,19 +31,20 @@ get_header();
         <?php
             if (have_posts()) {
                 while (have_posts()) {
+                    // Très important: va dire que tous les tags font référence au post en cours de lecture par la boucle
                     the_post(); 
         ?> 
-            <article class="post">
-                <a href="" class="post__category post__category--color-team">team</a>
-                <h3><?php the_title(); ?></h3>
-                <div class="post__meta">
-                    <img class="post__author-icon" src="../images/icon-dar.png" alt="">
-                    <strong class="post__author"><?php the_author(); ?></strong>
-                    <time datetime="2018-02-10">le 10 février 2018</time>
-                </div>
-                <p><?php the_content(); ?></p>
-                <a href="article.html" class="post__link">Continue reading</a>
-            </article>
+        <article class="post">
+            <a href="" class="post__category post__category--color-team">team</a>
+            <h3><?php the_title(); ?></h3>
+            <div class="post__meta">
+                <img class="post__author-icon" src="../images/icon-dar.png" alt="">
+                <strong class="post__author"><?php the_author(); ?></strong>
+                <time datetime="2018-02-10">le 10 février 2018</time>
+            </div>
+            <p><?php the_excerpt(); ?></p>
+            <a href="article.html" class="post__link">Continue reading</a>
+        </article>
         <?php 
                 }
             }
