@@ -29,6 +29,13 @@ get_header();
         <div class="posts">
 
         <?php
+            if(is_404()) {
+                echo "Page introuvable...";
+                ?>
+                <a href="<?= home_url(); ?>" class="post__link">Back to home</a>
+                <?php
+            };
+
             if (have_posts()) {
                 while (have_posts()) {
                     // Très important: va dire que tous les tags font référence au post en cours de lecture par la boucle
@@ -64,10 +71,20 @@ get_header();
                 ?>
             </p>
             <a href="<?php the_permalink(); ?>" class="post__link">Continue reading</a>
+
+            <?php 
+                // Si je ne suis pas sur ma page d'accueil, afficher un bouton de retour vers la home
+                if(!is_home()) {
+            ?>
+            <br>
+            <a href="<?= home_url(); ?>" class="post__link">Back to home</a>
+            <?php
+                }
+            ?>
         </article>
         <?php 
                 }
-            }
+            };
         ?>
 </div>
 </main>
