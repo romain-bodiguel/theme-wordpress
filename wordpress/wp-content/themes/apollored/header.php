@@ -17,8 +17,6 @@
     // il est INDISPENSABLE
     wp_head(); 
     ?>
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <div class="wrapper"><!--div wrapper-->
