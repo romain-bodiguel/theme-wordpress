@@ -11,7 +11,6 @@
 <html>
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
-    <title>oNews</title>
     <?php 
     // Chargement des headers WP ainsi que de la barre d'affichage en haut
     // il est INDISPENSABLE
@@ -31,6 +30,6 @@
         </div>
         <?php 
         // Récupération du template site-header.php dans le dossier template-parts/header/
-        get_template_part( 'template-parts/header/navbar' ); 
+        get_template_part('template-parts/header/navbar'); 
         ?>
       </header>
